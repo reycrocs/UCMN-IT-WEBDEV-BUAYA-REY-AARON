@@ -1,2 +1,4 @@
 # UCMN-IT-WEBDEV
-my first repository
+MY FIRST REPOSITORY
+Name: Rey Aaron C. Buaya
+Course & Section: BSIT 1B
