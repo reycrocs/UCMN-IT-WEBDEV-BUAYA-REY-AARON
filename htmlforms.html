@@ -1,0 +1,210 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Forms | Rey Aaron Buaya</title>
+    <style media="screen">
+* {
+  box-sizing: border-box;
+  background-color: #f4b41a;
+  color: #143d59;
+  margin-top: 5px;
+}
+h2 {
+  font-size: 75px;
+  text-align: center;
+}
+input[type=text],input[type=email], select {
+  width: 95%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  background-color: white;
+}
+
+textarea {
+  width: 95%;
+  height: 80px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  background-color: white;
+}
+
+label {
+  padding: 12px 12px 12px 10px;
+  display: inline-block;
+}
+
+button {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.comment {
+  width: 195%;
+  height: 80px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+.col-left2 {
+  float: left;
+  width: 50%;
+}
+.col-right2 {
+  float: left;
+  width: 50%;
+}
+.col-left {
+  float: left;
+  width: 33%;
+}
+
+.col-middle {
+  float: left;
+  width: 33%;
+}
+.col-right {
+  float: left;
+  width: 33%;
+}
+.col-button {
+  float: right;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-left, .col-middle, .col-right, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>PLEASE FILL UP THE FORM</h2>
+
+<div class="container">
+  <form action="/action_page.php">
+    <div class="col-left">
+      <label for="name">First Name</label>
+      <input type="text" id="name" name="name" placeholder="Your first name..">
+    </div>
+    <div class="col-middle">
+      <label for="mname">Middle Name</label>
+      <input type="text" id="mname" name="mname" placeholder="Your middle name..">
+    </div>
+    <div class="col-left">
+      <label for="fname">Family Name</label>
+      <input type="text" id="fname" name="fname" placeholder="Your family name..">
+    </div>
+    <div class="col-left">
+    <label for="gender">Gender</label><br>
+    <input type="radio" name="gender" required>
+    <label for="male">MALE</label>
+    <input type="radio" name="gender" required>
+    <label for="female">FEMALE</label>
+    </div>
+    <div class="col-left">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Enter email">
+    </div>
+    <div class="col-right">
+      <label for="color">Favorite Color</label>
+      <select id="color" name="color">
+        <option value="red">Red</option>
+        <option value="orange">Orange</option>
+        <option value="yellow">Yellow</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="indogo">Indigo</option>
+        <option value="violet">Violet</option>
+      </select>
+    </div>
+    <div class="col-left2">
+      <label for="address">Home Address</label><br>
+      <textarea id="address" name="address" placeholder="Enter home address"></textarea>
+    </div>
+    <div class="col-right2">
+      <label for="checkbox">Hobbies</label><br>
+      <input type="checkbox">
+      <span class="checkmark"></span>
+      <label class="container">Cooking</label>
+      <input type="checkbox">
+      <span class="checkmark"></span>
+      <label class="container">Baking</label>
+      <input type="checkbox">
+      <span class="checkmark"></span>
+      <label class="container">Hiking</label>
+      <input type="checkbox">
+      <span class="checkmark"></span>
+      <label class="container">Running</label>
+      <input type="checkbox">
+      <span class="checkmark"></span>
+      <label class="container">Walking</label>
+      <input type="checkbox">
+      <span class="checkmark"></span>
+      <label class="container">Swimming</label>
+      <input type="checkbox">
+      <span class="checkmark"></span>
+      <label class="container">Biking</label><br>
+      <input type="checkbox">
+      <span class="checkmark"></span>
+      <label class="container">Dancing</label>
+      <input type="checkbox">
+      <span class="checkmark"></span>
+      <label class="container">Singing</label>
+      <input type="checkbox">
+      <span class="checkmark"></span>
+      <label class="container">Gardening</label>
+      <input type="checkbox">
+      <span class="checkmark"></span>
+      <label class="container">Writting</label>
+      <input type="checkbox">
+      <span class="checkmark"></span>
+      <label class="container">Painting</label>
+      <input type="checkbox">
+      <span class="checkmark"></span>
+      <label class="container">Sewing</label>
+      <input type="checkbox">
+      <span class="checkmark"></span>
+      <label class="container">Video Game</label>
+    </div>
+    <div class="col-left2">
+      <label for="something">Say something about yourself</label><br>
+      <textarea class="comment" id="subject" name="subject" placeholder="Type something about yourself"></textarea><br>
+    </div>
+    <div class="col-button">
+      <table style="margin-left: 40%;">
+        <th><button type="submit">SUBMIT</th>
+        <th><button type="reset">CLEAR ALL</th>
+      </table>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
